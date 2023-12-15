@@ -24,7 +24,11 @@
         </div>
 
         <div id="workout-plan"></div>
-        <button onclick="exportToHTML()">Export to HTML</button>
+        <div id="export-download">
+            <button onclick="exportToHTML()">Exporter til HTML</button>
+            <button type="submit" onclick="window.open('template.html')">Skabelon</button>
+            <button type="submit" onclick="window.open('dagbog til print.html')">Dagbog</button>
+        </div>
     </section>
 
     <script src="script.js"></script>
