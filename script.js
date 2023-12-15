@@ -2,15 +2,15 @@
 
 // Updated exercises object
 const exercises = {
-    "Skala": ["Squats", "Lunges", "Leg Curls", "Leg Extensions", "Calf Raises", "Hip Thrust", "Deadlifts"],
+    "Skala": ["A", "Bb", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
     "Arpeggio": ["A", "Bb", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
-    "Intervaller": ["Lille Sekund", "Store Sekund", "Lille Terts", "Stor Terts", "Kvart", "Tritonus", "Kvint", ""],
-    "Stykke A": [],
-    "Stykke B": [],
-    "Stykke C": [],
-    "Lytte": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Mountain Climbers", "Side Bend", "Burpees", "Side Bend on floor", "Starfish Crunches", "Russian Twists"],
-    "Læse": ["Dumbbell Curl", "Incline Curl", "Barbell Curl", "Crossbody Curl", "Preacher Curl", "Push-ups", "Inverted Row", "Row", "Bendover Row", "Hammer Curls", "Chin-Ups"]
-};
+    "Intervaller": ["Lille Sekund", "Store Sekund", "Lille Terts", "Stor Terts", "Kvart", "Tritonus", "Kvint", "Lille Sekst", "Stor Sekst", "Lille Septim", "Stor Septim", "Oktav"],
+    "Stykke A": ["Titel/Link"],
+    "Stykke B": ["Titel/Link"],
+    "Stykke C": ["Titel/Link"],
+    "Lytte": ["Titel/Link:"],
+    "Læse": ["Titel/Link:"]
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     createWorkoutTable();
@@ -32,6 +32,7 @@ function createCategoryButtons() {
     });
 }
 
+// Modify the updateExerciseButtons function to pass both category and exercise
 function updateExerciseButtons(category) {
     const exerciseButtons = document.getElementById("exercise-buttons");
     exerciseButtons.innerHTML = "";
@@ -40,13 +41,13 @@ function updateExerciseButtons(category) {
         const button = document.createElement("button");
         button.textContent = exercise;
         button.addEventListener("click", function () {
-            addExerciseToPlan(exercise);
+            addExerciseToPlan(category, exercise);
         });
         exerciseButtons.appendChild(button);
     });
 }
 
-function addExerciseToPlan(exercise) {
+function addExerciseToPlan(category, exercise) {
     const workoutTable = document.getElementById("workout-table");
 
     if (!workoutTable) {
@@ -64,8 +65,8 @@ function addExerciseToPlan(exercise) {
         cell.contentEditable = true;
     }
 
-    // Set exercise name in the first cell
-    row.cells[0].textContent = exercise;
+    // Set category and exercise name in the first cell
+    row.cells[0].textContent = `${category}: ${exercise}`;
 }
 
 function createWorkoutTable() {
