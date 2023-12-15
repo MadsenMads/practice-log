@@ -75,11 +75,11 @@ function createWorkoutTable() {
     table.id = "workout-table";
 
     const headerRow = table.insertRow(0);
-    headerRow.insertCell(0).textContent = "Exercise";
+    headerRow.insertCell(0).textContent = "Øvelse";
 
     for (let i = 1; i <= 1; i++) { // title for subsequent cells
         const headerCell = headerRow.insertCell(i);
-        headerCell.textContent = `set ${i}`;
+        headerCell.textContent = `Noter ${i}`;
     }
 
     workoutSection.appendChild(table);
