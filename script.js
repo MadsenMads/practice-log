@@ -2,8 +2,8 @@
 
 // Updated exercises object
 const exercises = {
-    "Skala": ["A", "Bb", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
-    "Arpeggio": ["A", "Bb", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
+    "Skala": ["A", "A#/Bb", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"],
+    "Arpeggio": ["A", "A#/Bb", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"],
     "Intervaller": ["Lille Sekund", "Store Sekund", "Lille Terts", "Stor Terts", "Kvart", "Tritonus", "Kvint", "Lille Sekst", "Stor Sekst", "Lille Septim", "Stor Septim", "Oktav"],
     "Stykke A": ["Titel/Link"],
     "Stykke B": ["Titel/Link"],
