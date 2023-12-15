@@ -2,15 +2,14 @@
 
 // Updated exercises object
 const exercises = {
-    "Legs": ["Squats", "Lunges", "Leg Curls", "Leg Extensions", "Calf Raises", "Hip Thrust", "Deadlifts"],
-    "Core": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Mountain Climbers", "Side Bend", "Burpees", "Side Bend on floor", "Starfish Crunches", "Russian Twists"],
-    "Shoulder": ["Overhead Press", "Shoulder Press", "Arnold Press", "Reverse Flyes", "Upright Row", "Shoulder Shrug", "Front Raise with Rotation", "External Rotation", "Side Raises", "Front Raises"],
-    "Biceps": ["Dumbbell Curl", "Incline Curl", "Barbell Curl", "Crossbody Curl", "Preacher Curl", "Push-ups", "Inverted Row", "Row", "Bendover Row", "Hammer Curls", "Chin-Ups"],
-    "Triceps": ["Narrow Benchpress", "Dumbbell Pullover", "Diamond Pushups", "Dips", "Tricep Kickbacks", "Skull Crushers"],
-    "Chest": ["Benchpress", "Incline Benchpress", "Dumbbell Benchpress", "Flyes"],
-    "Back/Lats": ["Rows", "Wide Pull-ups", "Reverse Flyes"],
-    "Compound": ["Deadlift", "Rows", "Pull-Ups", "Squats"],
-    "Cardio": ["Running", "Jump Rope", "Mountaint Climbers", "Jumping Jacks", "Burpees"]
+    "Skala": ["Squats", "Lunges", "Leg Curls", "Leg Extensions", "Calf Raises", "Hip Thrust", "Deadlifts"],
+    "Arpeggio": ["A", "Bb", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
+    "Intervaller": ["Lille Sekund", "Store Sekund", "Lille Terts", "Stor Terts", "Kvart", "Tritonus", "Kvint", ""],
+    "Stykke A": [],
+    "Stykke B": [],
+    "Stykke C": [],
+    "Lytte": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Mountain Climbers", "Side Bend", "Burpees", "Side Bend on floor", "Starfish Crunches", "Russian Twists"],
+    "Læse": ["Dumbbell Curl", "Incline Curl", "Barbell Curl", "Crossbody Curl", "Preacher Curl", "Push-ups", "Inverted Row", "Row", "Bendover Row", "Hammer Curls", "Chin-Ups"]
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,7 +76,7 @@ function createWorkoutTable() {
     const headerRow = table.insertRow(0);
     headerRow.insertCell(0).textContent = "Exercise";
 
-    for (let i = 1; i <= 1; i++) {
+    for (let i = 1; i <= 1; i++) { // title for subsequent cells
         const headerCell = headerRow.insertCell(i);
         headerCell.textContent = `set ${i}`;
     }
@@ -103,6 +102,7 @@ function exportToHTML() {
     htmlContent += "body { font-family: Arial, sans-serif; }\n";
     htmlContent += "table { border-collapse: collapse; width: 100%; }\n";
     htmlContent += "th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }\n";
+    htmlContent += "tr > :first-child { border: 1px solid #ddd; padding: 8px; width: 1%; white-space: nowrap; }\n";
     htmlContent += "</style>\n";
     htmlContent += "</head>\n<body>\n";
 

@@ -71,6 +71,7 @@ tr > :first-child {
     padding: 8px;
     /* background-color: blue; */
     width: 1%;
+    white-space: nowrap;
 }
 
 td {
