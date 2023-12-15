@@ -124,13 +124,13 @@ function exportToHTML() {
 
     htmlContent += "</table>\n</body>\n</html>";
 
-    downloadHTMLFile(htmlContent);
+    downloadHTMLFile(htmlContent, formattedDate);
 }
 
-function downloadHTMLFile(content) {
+function downloadHTMLFile(content, formattedDate) {
     const blob = new Blob([content], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "workout_plan.html";
+    a.download = `Øveplan ${formattedDate}.html`;
     a.click();
 }
