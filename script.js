@@ -79,7 +79,7 @@ function createWorkoutTable() {
 
     for (let i = 1; i <= 1; i++) { // title for subsequent cells
         const headerCell = headerRow.insertCell(i);
-        headerCell.textContent = `Noter ${i}`;
+        headerCell.textContent = `Noter`;
     }
 
     workoutSection.appendChild(table);
